@@ -26,3 +26,11 @@ module "alb" {
   instancesalb = module.ec2.instances
 
 }
+
+module "acm" {
+  source           = "./modules/acm"
+  domain_name      = var.domain_name
+  alternative_name = var.alternative_name
+
+
+}
